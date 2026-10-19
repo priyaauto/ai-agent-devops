@@ -1,0 +1,22 @@
+apiVersion: kafka.strimzi.io/v1
+kind: KafkaConnector
+metadata:
+  name: solace-connector-sink
+  labels:
+    strimzi.io/cluster: solace-connect-sink-build
+spec:
+  class: com.solace.connector.kafka.connect.sink.SolaceSinkConnector
+  tasksMax: 1
+  config:
+    key.converter: org.apache.kafka.connect.storage.StringConverter
+    value.converter: org.apache.kafka.connect.converters.ByteArrayConverter
+    sol.host: tcps://si0vm02570.rbesz01.com:55443
+    sol.record_processor_class: com.solace.connector.kafka.connect.sink.recordprocessor.SolDynamicDestinationRecordProcessor
+    sol.username: solace
+    sol.password: solace
+    solace.vpn: EMB-DQ-V177-ProConOpenShiftQ
+    sol.ssl_trust_store: /mnt/boschca.truststore
+    topics.regex: "^[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
+    sol.dynamic_destination: true
+    
+

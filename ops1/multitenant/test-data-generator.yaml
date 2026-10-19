@@ -1,0 +1,6 @@
+ingress:
+  hosts:
+    - host: test-data-generator-ops1.ppc-cl1-dev.bosch.com
+      paths:
+        - path: /
+          pathType: Prefix

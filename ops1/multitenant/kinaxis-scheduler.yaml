@@ -1,0 +1,7 @@
+configMap:
+  CONFIGURATION_URL_KEYCLOAK: https://idm-ops1.ppc-cl1-dev.bosch.com/
+tenants:
+  - name: cc
+    plants:
+      - name: bhp
+        cronRate: "0 0 * * *"  # Runs every day at midnight

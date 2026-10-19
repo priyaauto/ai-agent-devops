@@ -1,0 +1,8 @@
+fullnameOverride: ed-buep-tribe-kibana
+kibana:
+  name: ed-buep-tribe-kibana
+  image:
+    tag: "7.10.0"
+  configMap:
+    ELASTICSEARCH_HOSTS: http://ops1-ed-buep-ppc-elasticsearch:9200
+    SERVER_BASEPATH: /report-kibana/ed/buep

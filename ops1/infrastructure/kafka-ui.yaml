@@ -1,0 +1,32 @@
+secrets:
+  akhq:
+    connections:
+      central-cluster-kafka:
+        properties:
+          bootstrap.servers: "central-cluster-kafka-bootstrap:9092"
+ingress:
+  enabled: true
+  className: openshift-default
+  annotations:
+    route.openshift.io/termination: edge
+  paths:
+    - /
+  pathType: "Prefix"
+  hosts:
+    - kafka-ops1.ppc-cl1-dev.bosch.com
+
+configuration:
+  micronaut:
+    security:
+      enabled: true
+  akhq:
+    server:
+      access-log:
+        enabled: true
+    security:
+      default-group: no-roles
+      basic-auth:
+        - username: admin
+          password: 27be2e290b35d8bed6b9a5244e04b40a5256b6df2d79f6b62f59b589cb6be97a
+          groups:
+            - admin

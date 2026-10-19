@@ -1,0 +1,5 @@
+fullnameOverride: "cc-bhp-ppc-elasticsearch"
+els:
+  name: ops1-cc-bhp-ppc-elasticsearch
+  image: bcr2.inside.bosch.cloud/procon/elasticsearch:7.10.0
+  nfsPath: /vol/si00fa52_vol09/procon_test_clusters/dev_cluster/openshift/ops1/data/tenant-specific/cc/bhp/cc-bhp-ppc-elasticsearch

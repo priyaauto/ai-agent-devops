@@ -1,0 +1,50 @@
+apiVersion: kafka.strimzi.io/v1
+kind: KafkaConnect
+metadata:
+  name: solace-connect-sink-build
+  annotations:
+    strimzi.io/use-connector-resources: "true"
+spec:
+  replicas: 1
+  groupId: solace-connect-sink
+  configStorageTopic: solace-connect-sink-configs
+  offsetStorageTopic: solace-connect-sink-offsets
+  statusStorageTopic: solace-connect-sink-status
+  bootstrapServers: central-cluster-kafka-bootstrap:9092
+  # image: 'bcr2.inside.bosch.cloud/procon/pubsubplus-connector-kafka-sink:test2'
+  config:
+    key.converter: org.apache.kafka.connect.json.JsonConverter
+    value.converter: org.apache.kafka.connect.json.JsonConverter
+    key.converter.schemas.enable: true
+    value.converter.schemas.enable: true
+    # -1 means inherit from broker's default.replication.factor (currently 3)
+    config.storage.replication.factor: -1
+    offset.storage.replication.factor: -1
+    status.storage.replication.factor: -1
+  build:
+    output:
+      type: docker
+      image: bcr2.inside.bosch.cloud/procon/pubsubplus-connector-kafka-sink:latest
+      pushSecret: regcred
+    plugins: 
+      - name: pubsubplus-connector-kafka-sink
+        artifacts:
+          - type: zip
+            # url: https://solaceproducts.github.io/pubsubplus-connector-kafka-sink/downloads/pubsubplus-connector-kafka-sink-3.0.1.zip
+            url: http://example2-procon-ops1-infrastructure.apps.3fc41f2708.ccsd.ipz001.internal.bosch.cloud/kurec/pubsubplus-connector-kafka-sink-3.0.1.zip
+            insecure: true
+  template:
+    pod:
+      imagePullSecrets:
+        - name: regcred
+      volumes:
+      - name: boschca-truststore
+        configMap:
+          name: keystore1
+          items:
+            - key: boschca.truststore
+              path: boschca.truststore
+    connectContainer:
+      volumeMounts:
+        - name: boschca-truststore
+          mountPath: /mnt

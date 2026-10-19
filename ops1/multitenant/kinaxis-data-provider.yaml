@@ -1,0 +1,7 @@
+service:
+  name: kinaxis-data-provider
+database:
+  nfsPath: /vol/si00fa52_vol09/procon_test_clusters/dev_cluster/openshift/ops1/data/central-services/kinaxis_data_provider-mysql
+  volumeName: ops1-kinaxis-data-provider
+#configMap:
+#  SPRING_DATASOURCE_URL: jdbc:mysql://ops1-kinaxis-data-provider-database:3306/kinaxis_data_provider?useUnicode=true&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true

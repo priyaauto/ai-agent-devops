@@ -1,0 +1,11 @@
+image:
+  repository: bcr2.inside.bosch.cloud/procon/capacity-gateway
+  pullPolicy: Always
+  tag: "14.1.0-RC1"
+gateway: http://procon-spring-cloud-gateway.procon-ops1-multitenant.svc.cluster.local:8080
+ingress:
+  hosts:
+    - host: ops1.ppc-cl1-dev.bosch.com
+      paths:
+        - path: /capacity
+          pathType: Prefix

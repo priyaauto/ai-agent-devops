@@ -1,0 +1,16 @@
+fullnameOverride: procon-quick-start-guide
+image:
+  repository: bcr2.inside.bosch.cloud/procon/procon-quick-start-guide
+  pullPolicy: Always
+  tag: "latest"
+ingress:
+  enabled: true
+  className: openshift-default
+  annotations:
+    route.openshift.io/termination: edge
+    haproxy.router.openshift.io/rewrite-target: /
+  hosts:
+    - host: ops1.ppc-cl1-dev.bosch.com
+      paths:
+        - path: /documentation
+          pathType: Prefix

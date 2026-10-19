@@ -1,0 +1,11 @@
+---
+fullnameOverride: keycloak
+route:
+  host: idm-ops1.ppc-cl1-dev.bosch.com
+databaseHost: keycloak-mysql-ops1
+mysql:
+  fullnameOverride: keycloak-mysql-ops1
+  nfsPath: /vol/si00fa52_vol09/procon_test_clusters/dev_cluster/openshift/ops1/data/infra-services/keycloak-mysql
+  passwordSecretRef:
+    name: keycloak-db-secret
+    key: password

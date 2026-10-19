@@ -1,0 +1,13 @@
+# fullnameOverride: ops1-procon-spring-cloud-gateway
+ingress:
+  hosts:
+    - host: api-ops1.ppc-cl1-dev.bosch.com
+      paths:
+        - path: /
+          pathType: Prefix
+configMap:
+  MULTITENANCY_TENANTS: AS,CC,ED
+  APPLICATION_MENU_PCS: $(APPLICATION_DOMAIN)/core/<tenantId>/<plantId>/
+  APPLICATION_MENU_HOME: $(APPLICATION_DOMAIN)/launchpad/<tenantId>/<plantId>/
+  APPLICATION_SINGLEORDERDOMAIN: $(APPLICATION_DOMAIN)
+  REPORT_BASE_URL: /report-kibana

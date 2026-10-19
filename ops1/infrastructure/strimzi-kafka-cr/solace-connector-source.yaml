@@ -1,0 +1,25 @@
+apiVersion: kafka.strimzi.io/v1
+kind: KafkaConnector
+metadata:
+  name: solace-connector-source
+  labels:
+    strimzi.io/cluster: solace-connect-source-build
+spec:
+  class: com.solace.connector.kafka.connect.source.SolaceSourceConnector
+  tasksMax: 1
+  config:
+    kafka.topic: MaterialDocs
+    key.converter: org.apache.kafka.connect.storage.StringConverter
+    max.request.size: 2097152
+    sol.host: tcps://si0vm02570.rbesz01.com:55443
+    sol.message_processor_class: com.solace.connector.kafka.connect.source.msgprocessors.SolSampleSimpleMessageProcessor
+    sol.message_processor.map_solace_standard_properties: true
+    sol.message_processor.map_user_properties: true
+    sol.password: solace
+    sol.ssl_trust_store: /mnt/boschca.truststore
+    sol.ssl_trust_store_password: changeit
+    sol.topics: MaterialDocs/>
+    sol.username: solace
+    sol.vpn_name: EMB-DQ-V106-CP-ProCon
+    value.converter: org.apache.kafka.connect.converters.ByteArrayConverter
+

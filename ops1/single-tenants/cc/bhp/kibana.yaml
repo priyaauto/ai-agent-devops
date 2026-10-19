@@ -1,0 +1,6 @@
+fullnameOverride: cc-bhp-tribe-kibana
+kibana:
+  name: cc-bhp-tribe-kibana
+  configMap:
+    ELASTICSEARCH_HOSTS: http://ops1-cc-bhp-ppc-elasticsearch:9200
+    SERVER_BASEPATH: /report-kibana/cc/bhp       

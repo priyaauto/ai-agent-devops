@@ -1,0 +1,4 @@
+global:
+  configMap:
+    TENANT: as
+    TENANTUPPERCASE: AS

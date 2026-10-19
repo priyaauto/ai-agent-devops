@@ -1,0 +1,9 @@
+# Cluster settings
+cluster:
+  # memberCount is the number Hazelcast members
+  memberCount: 2
+
+mancenter:
+  ingress:
+    hosts:
+      - hazelcast-mancenter-ops1.ppc-cl1-dev.bosch.com

@@ -1,0 +1,8 @@
+fullnameOverride: as-sgmp-tribe-kibana
+kibana:
+  name: as-sgmp-tribe-kibana
+  image:
+    tag: "7.10.0"
+  configMap:
+    ELASTICSEARCH_HOSTS: http://as-sgmp-ppc-elasticsearch:9200
+    SERVER_BASEPATH: /report-kibana/as/sgmp

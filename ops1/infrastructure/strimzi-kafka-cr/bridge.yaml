@@ -1,0 +1,26 @@
+kind: KafkaBridge
+apiVersion: kafka.strimzi.io/v1
+metadata:
+  name: central-cluster
+spec:
+  replicas: 1
+  bootstrapServers: 'central-cluster-kafka-bootstrap:9092'
+  http:
+    port: 8080
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kafka-bridge
+spec:
+  rules:
+    - host: kafka-bridge-ops1.ppc-cl1-dev.bosch.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: central-cluster-bridge-service
+                port:
+                  number: 8080

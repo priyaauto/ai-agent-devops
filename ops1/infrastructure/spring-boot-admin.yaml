@@ -1,0 +1,35 @@
+namespaced: true
+ingress:
+  hostname: spring-boot-admin-ops1.ppc-cl1-dev.bosch.com
+configmap:
+  application.yaml: |
+    server:
+      forward-headers-strategy: NATIVE
+    spring:
+      cloud:
+        kubernetes:
+          discovery:
+            all-namespaces: true
+      boot:
+        admin:
+          discovery:
+            instances-metadata:
+              spring-boot: "ops1"
+      security:
+        user:
+          name: "admin"
+          password: "overridden by SPRING_SECURITY_USER_PASSWORD"
+
+env:
+- name: LOADER_PATH
+  value: /app/resources
+- name: SPRING_BOOT_ADMIN_DISCOVERY_INSTANCES-METADATA_SPRING-BOOT-OPS-ONE
+  value: "true"
+- name: SPRING_SECURITY_USER_PASSWORD
+  valueFrom:
+    secretKeyRef:
+      name: spring-boot-admin
+      key: SPRING_SECURITY_USER_PASSWORD
+
+# will be available as SPRING_SECURITY_USER_PASSWORD
+user_password: AgBXhV8tWRhKG/zHYNrwQirrbK8WMUY9ygo4oVPJVQs4TIJDPm9PL5uPMOK1CuiqfcbWjig1xpi7bG5Bz+JlkABWzn6wh4TE7TIpTU2rwmS41KDxQjUMxtZ02095YU9uyCRCDom15QstTDX8eZFZRfg2zCMpSt0MfnKaYndXuSgKJYA0opoIGt7DaHQo+COp337Ij0xijBvKFI7UOGLdcpET5JH5AC1K6RJfessGMBf66qKRku5lHCoAyhtBZj8L1bSkSRBptdsMU+d7jH0M/BOgsZh/OqXlrB71j4XH8QeBjKTDyBkwmC+m53txLxXqtbDJe5EAVU0MWTDuHkHhDzgqLDsMnCv/PB0g7+PsB4AsOJjWFNVxNdH1NJl+kESVWETc0oj67B/lbfRazAmu/2zkB5TFJuD1e2R/WB0n/xt/phYp14qaEtx7QdGKGl2FLXv6HUwmSKn7LsqUhpOzTeETjG4kPxH5Wq0dn/2esXtUcKHMi/OYVFmMSzFXLwP29MGhgre3piG952nTYLZlvwql4yEqHg2qXN5rCwQA6ium/D5YixsWViSskgfGX3nTM2IxdFwcUPIkQz0+XHi9ekIQQ1v3RC4UXRkgLVm5X7zeOPHusf8GgMJwVepz21cPupt8UvtBNgOpNzRQWp07IDkO3Sd4VW7f9nuQVid3LR71Hk8vv0/1Z0rIe+2V830uny8Net/XJrHGPnp7ME2DNTZfOzrelw==

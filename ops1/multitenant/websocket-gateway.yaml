@@ -1,0 +1,2 @@
+configMap:
+  SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS: central-cluster-kafka-brokers.procon-$(STAGE)-infrastructure.svc.cluster.local

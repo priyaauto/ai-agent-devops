@@ -1,0 +1,11 @@
+image:
+  repository: bcr2.inside.bosch.cloud/procon/single-orders-gateway
+  pullPolicy: Always
+  tag: 13.1.0-RC3
+gateway: http://procon-spring-cloud-gateway.procon-ops1-multitenant.svc.cluster.local:8080
+ingress:
+  hosts:
+    - host: single-orders-ops1.ppc-cl1-dev.bosch.com
+      paths:
+        - path: /single-orders
+          pathType: Prefix

@@ -1,0 +1,5 @@
+global:
+  configMap:
+    TENANT: ed
+    TENANTUPPERCASE: ED
+    SPRING_CLOUD_CONSUL_DISCOVERY_REGISTER: "false"

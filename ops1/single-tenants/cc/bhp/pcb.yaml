@@ -1,0 +1,43 @@
+fullnameOverride: cc-bhp-pcb
+database:
+  nfsPath: /vol/si00fa52_vol09/procon_test_clusters/dev_cluster/openshift/ops1/data/tenant-specific/cc/bhp/cc-bhp-consumption_control-mysql
+configMap:
+  APPLICATION_DATABASE_URL: $(TENANT)-$(PLANT)-pcb-database:3306
+  APPLICATION_JOBS_MASTERDATA_CRONJOB: 0 0/15 * ? * *
+sealedSecret:
+  ROOT_PASSWORD: AgAU8KcMLKXaaijaOMfLBaA8gaWSiWfSV99XugIj3CVUVC1D4pHGLzu52Z9o1+s3Umc2OC6K8j25WQd1MH0f+DSEO2bCrbGnAXEznrt15prckiwZcY5Zisyn1BkBHxOfCCrv8vLxcjlTZJCUagrtKsSfUhi9KddDOZbc/TVw06H2t58hheU6tGv46zC+emMDygX7c6D8VmawdrbWUh/NsDeNac9/MPWIgmTgFRN5v/N2bdv908qG2dcU6KR9BSsgsOETrsqeL30QxayVQz0kF0Wbryk0LD99Xocjr/8HeaFApBpHoqVETwEVHEJKnfknnVBkX4crZ9Zs2EXCmEYh9lRKmNPlqLYlkYcZA9vaSbSqX8iJ4/v2j6OH8BGQhn4XsaPzDTu9xPQjqjyV0N2NiZS9/FP9sVAKP4S7KoUiJ9Kf+unMD7JCBNbfXckNPQiCLSOALNEjFXFLIWNQsO+7JNudITF5aUTqbYRCldnVTK4mgLoT86o/IiEoaEgBP2HcxqXce6MjcTeA+MGU3iI+Aeg8BWFyY00MAyjmlEHqH7hXXhVdaU1dU6P3GAaJO+arT9cgdQhDaYZw9jaiuNWjZfzRHKP/udeH+kryfgGXFXPKGrPxBM1Rj/ubdqU0KJqUOmVdiwL2rANXDH1uA2l273o8lGQJFD/RxA2L1LL1J8OIgrXf2qaefp7H9Svs7s9gqHY=
+  SECURITY_OAUTH2_CLIENT_CLIENT_ID: AgB25S128BK2w07OKW9Q42P2y1P+31vObGMVYlnjdF32Y9fw3dqyHOiNxcVCwyhdZA1fxS59w6s6yAEZkx38jBOsjWqL2MdIK9/FnTjsSgXxtEsoY4bYhUDDrrcABKYtMmQNR9DR5u6a9feC8xi/LmgH7ZtJJF8cs5cR1ul7uXA0ct3L7IJl6N/xEyQLezPmv6BtNflRe7mEF0Z+xHKIbLgo6jMvZ9Qd7nWY2lUVmmTd76dvkNGqY9k8TRxw7BNEucFC44/VELyPnrMgSzL9zK64VM0VPlKi6Aq8RsTJ6ruos/IhaLxKO3phCJfXyb2GWt3lP3VCzf38g/H8E0Ux7BtxZD8N4Yt/WHijAaSGEofpCZanfs46DUWDc1xUntm1f5pd/cHkN7mM9eph0G4RxRe54WaW5kD/pkC0rf8eapwLD+Zo5ezYi8u7OkzQe3wbMV8TjX8KkIJep/78H49bnIkaTGwNOPxmUo8xzKPH8T6wLrkwfWTrBn8br4Wk+c45/70AD4Jvl+vTbrSRJrVuXetWZ5n+antrlWQkdKeaOIvinpvvhHthQyPPBleSfgyNq3rICJ0wwJ0MAQaN06wdObdDyouZbMlbx5X7oJJoA0Btw+97pggIKnw11I8ygPYk7OiDqhH2w+Kqt9Vx2Iq0S1Su51HwxRFJdg2V4fK3rN7wE3WXOuRIGI+MMZuvhWXs1WiIVrmNYJlkaQ==
+  SECURITY_OAUTH2_CLIENT_CLIENT_SECRET: AgA68UL3tNNkXInu9qUC6tS39in7FjbnNJgo+Wj5/Y+tPeN36jgmklKgCi+sJW7Bj5HeVShuDEIVCK4j5NKcj6ngB2WZoOyJsWytHX/8OY4QUsS4+UEPzXLWjUZBmru/QMzQFyorwVr6lbqZvPE8A/L2S3y/qFpBh6qNxfNh2bcS8zueSjvNAtGfHzq4RRblScIJ++nxDS64LUoT+btO3zRSIXhTqiAEVZmeA0lbaaaCk6zlGitHgwfC/jSPGot99uQcu6q5Wz3zsoHSgWU5CZcHFVy2m5IS8yU45Xkcqo2iux0g9SfaE1IRmK1VRBcyzz5yZBfkQjyggRu3ZKyT8ynS7AnK9uJUctzpBmlKTybcJ+gVpuqnC31H7yzSOIr6p8Z/m5V0guunsRp1evg6+3l6VQdOUZ22k70oWEp9Bz0cQdnFrSPwz3xSdGW0D/MsPiU39MF/qpUEEl55PM9baSio0b3bzbNlRKjl9T5RvZhgj20Q1BsNcAQeNn3L2AWdu2xXKXgM+OeLhYi62nTIIT5N2x8Yj/LSkUcXyYxhlRutRBrXGhldGZKnW/fk3pkjnbFb55fm+vyVvcMfB3nvOyU/0zp5RdLrDJWLCUZpmdXKJcSK0W2UpYoxZEyJ3QXDLGn2Bwx1BuIObRi2UhoHLn9i1YWIvmji08+1QpR7XZJm3g2lzpQ60YKT95V1jQ68DHE+etk18uuQBw==
+  SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_ID: AgA5dAI5aVP7QRtkF243PXJsEKHeZUb+8sBI5vjIJr7l5kZVyclA+2xAu39iQBVXDfV+tUUX2jrYmAEA1VaHLQv/3SRrt0pB/H8Cbzc9LHdPTuAYFOrPEYE7hjS/ZhYL7JUT9awaC+oTSI3D8p5xJQMDBGwPoE1FUP1QXoMtrv9vplCbcj6uLmpOp2FEw3vi7n5Gr0JeUpoYMb4cq6n/skP2nRJUdQvr9ppucPju+I6RKjuy+SVbeQvMJR/9+VP6cAk73HcapqhZd8FogDlakqwHL5ebOXH+Da2RGYhVXaujob5sbrigZgh1DtSh7FVn6EFWeIhC7ewBb7kq04xxHOLq5fT5lM3/CqYuUGznHwl+tITO+xMHrkj6BQE1I08xodzpQaxmxNag/edaXbaQY5BlJGWKiJGQv7SOk5yeF8IAMQACiLR6htARkpTclrInpIrZaOJ5j6ziEa3HDhyvW4a2NyHfKsLxMxuytkY3bjVc6D5Iir7lQcmzeiO2BRGL/FBTrYbVJ31jXJMMVe1qv6ljq/U1I0l5EM69psG2HdFuz/xrB9T9urofw5eQgoNYiaaWq/xRcT8OvMKBzCPHZBo0eQTsEmO/58GyW6X3/ykum9k9OgPkUH++w3o4Ud5psMh7VfR3VgGOmwg+Cw+G+B/sKjEWsrMoufLXXe/ZGAmFb31Fn3sYGBwwi8aiMgtnzzcKEYGUGsepbg==
+  SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_SECRET: AgBY26J/+TblIwKxNgp/U/EryIYpJpIIwDpGtq10D6g7kfex21p8kZoXRqR0AhdwmXtLn4f6O/TtF/ZUZCebqBe5Z0tn4ediIdJeqZn4UIR3kxJ3L1CAhpXKBcvg4r3MYRMEC+ShBXbbIR4E42ZJAzFE6Z3MtEtkW70XtSaQhMNijMTxfusCkYt9FHVTcLuWeRzeQxRlnUV5PBKO11vni9zaQdCU8DGr+1QUOCEY+7DAj8QoRdNHWrzaANDZsV7hbvTs/B4OYsVb+BNtCpZTH+8lumP+pmoX0gSlI/PWr4TASZ9EHfD51LBU5ECR5oNa4+YyfsBIpH3Ak6sD3OYbT0uWxVXdEmYLfLeOBFcuw5XfPuJrGSZxELXq0uhC+mm7IfRQhTF2PSOxl0hr0L2CLhzdJ/o9i5HBEj1nOhr1pWGOifUJ55a7PFPdOGU8o6enCzYwzobX1devBNPPZhno55lE0Uvb6EAMwBNRjMQd6GkWYyI4ets0Nu0088UO843w3y1k7YnxOrqImI4zEo+50pgML04q3obx6nslq0l9yq+fH7ghhymWZUSROogILx5/eq0vs/+4n0dCsm6IzSnWnAbNw/zB+UVkmV8oDSv8CTjBagJeZ8nfYXsLVo1GrvaAJXskGxqJt+U6mCRft3vmvrix1xVQi3/8Xy6xQMC+9xahjnB1sjVstbTl78g5Hxs4HCFxoT0dXOEUgQ==
+  SPRING_DATASOURCE_PASSWORD: AgAs3oL+9XkA7IQHbuCWx0nTOSzwTXBGCEPM2xDeVM/pP3I7kUCwg9ux6VZm0P1eVSSsacmPPnySBjNPshcSoFE9UOBMAQtz5Z+9rR7jt/DWzM2GROoeGxirKhgSMSYuefzmxZ1GKPYIooCMuTvai6n6VLeDSt59AaYaDfXpoy/z9qCuKa76v64WcFazQUFf3Qz6Spc8/wHHPEzUFPmUCbYVRS7rh1SV7yUHm/5LkXZ/qnLhkhNCKKuQKHmwf6Y3B59jWgUkwfaXni9nwrYE/OLtLVwiT3r3mwNN/0KQOUS7TqmWdI1D5XkOa4uzitYocwq0U/6A7RIp6fAPst+tI2EbZ7vHCQxK+cbWia8oyTSQzhLBjLKgD/Yhfo73Oy4sEyKduzAPVO/4Q66QcVHAPDW9QpXSpgLB8SNKP/Poy4KX6Q5pb271lyjmO9BdDb5oDrYkVVJ9vOojbPFXDfy9gdb51E/b7E97yWVj5gsXNyfmYcgJYGwzLRMEcm0ljj7kW4XO1anVcgUFf1Tzh+2Ot7L1YvER7EeiT35IjE8W7ef4qv36JE/KUdOm7MTzKKSMV0z7dXQ6dCS/kGHlVfxGQ94b77FnlxuqjSpurTthOXbWGZ4/gPnzSNvTsurl/8GD/XCoGO5F/YTPZq/o6VtUDIJ7fm2DQldx0Gr56ZxFti8bPeOQmxUsf6JuVRu4LmXPoHjrEQp19ubf7xnPTkkYM+YOsJyx
+  SPRING_DATASOURCE_USERNAME: AgCTm883v36YwyDj+jLmgI1LdJRSDIBTl2AjNKQce7lRIUN23gA/tv5znsRxQmKle5Us1afvWgwCk2Qr5yzbkuxrmB5PefaOHtUEX3WLEJzh/zyr1Vnc2JfLQlLF4l9RXv42JqOUnA/kYMvaxVZC4mFPGSO/UHRfNT1AGVepy/rKBoO341ZuafyZDB5WrUJr717Lb5VUq/7moOhT/GqwyhJuw0YlDxgXUjQWTEVMg2/2FBe7PK3+HIr6C6xmR6GrBFRCnK5igFmdNWv8FsZPhPfLulTw4ETac6n/49OAbDQuNr/IirfIufALRe+QY2FidYoNBkGbATK9vKnnKeVjiIv93n+WcmVxmq5F1fysYKWHcXLibW4GB4Ef+sOwtj2yL5yg/MSMkJmg0NMvZDcSNbUpFgYdWCmXH9OVvfPVdBfczSNfcMuWTfLzeMUc+ArR3fHuutykebhj1GqoauviNhV9XJJc0SqbUFINIH+Rs1fRcgvwmKP+sd72N7bY/tsFJ1UhBzQlXaW500MwoVPFTLaGkZ2uiTur7Mm4+ysEtbpF2D8fgRkfFNLis7RfU7e4DVtomffzuL51rTXr8SgdSShPLb5tN6WQh3D38GoZccgOds9KHzkn6dmfnWj7QdXlC8Wfgag3nopnBML/XWNBmgr/ZJPIDj+MLq5fEcvhLBp7YWOd2ubNr8dgUufixGuRXhcHwwo5vJLXOR0lczV0r7PDSWWZ
+
+cronjobs:
+  - name: pcb-domain-clean-up-task
+    spec:
+      schedule: "0 0 ? * *" # Every day at midnight of the Plant
+      timeZone: &timeZone "Europe/Berlin"  # Set the right plant timezone
+      image:
+        repository: bcr2.inside.bosch.cloud/procon/consumption-control-domain-clean-up-task
+  - name: pcb-generic-midnight-task
+    spec:
+      schedule: "0 0 ? * *" # Every day at midnight of the Plant
+      timeZone: *timeZone
+      image:
+        repository: bcr2.inside.bosch.cloud/procon/consumption-control-generic-midnight-task
+  - name: pcb-generic-clean-up-task
+    spec:
+      schedule: "0 0/6 * * *" # Every 6 Hours
+      image:
+        repository: bcr2.inside.bosch.cloud/procon/consumption-control-generic-clean-up-task
+  - name: pcb-capacity-sync-task
+    spec:
+      schedule: "*/15 * * * *" # Every 15 min
+      image:
+        repository: bcr2.inside.bosch.cloud/procon/consumption-control-capacity-sync-task
+  - name: pcb-master-data-sync-task
+    spec:
+      schedule: "0/15 * * * *"  # Every 15 min starting at minute 0
+      image:
+        repository: bcr2.inside.bosch.cloud/procon/consumption-control-master-data-sync-task

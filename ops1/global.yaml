@@ -1,0 +1,34 @@
+global:
+  configMap:
+    STAGE: ops1
+    ROOT_DOMAIN: ppc-cl1-dev.bosch.com
+    SOLACE_JMS_HOST: 'smfs://emb-procon-schwieberdingen-d-01-vip.rbesz01.com:55443'
+    SOLACE_JMS_MSGVPN: EMB-DQ-V101-ProCon-Ops01
+    SOLACE_JMS_MSG_VPN: EMB-DQ-V101-ProCon-Ops01
+    MANAGEMENT_HEALTH_CONSUL_ENABLED: "false"
+    MULTITENANCY_TENANTS: AS,CC,ED
+    SERVER_SHUTDOWN: graceful
+    NEW_RELIC_ENV: ops1
+    SPRING_CLOUD_CONSUL_HOST: ops-consul-server.procon-$(STAGE)-infrastructure.svc.cluster.local
+    SPRING_CLOUD_KUBERNETES_DISCOVERY_SERVICE-LABELS_SPRING-BOOT-OPS-ONE: true
+    MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_EXCLUDE: 'shutdown,heapdump'
+database:
+  includeEnvironmentAsPvPrefix: true
+  pvAnnotations:
+    "argocd.argoproj.io/compare-options": IgnoreExtraneous
+    "argocd.argoproj.io/sync-options": 'Prune=False,Delete=false'
+volume:
+  includeEnvironmentAsPvPrefix: true
+
+service:
+  labels:
+    spring-boot-ops-one: 'true'
+
+serviceAccount:
+  namespaced: false
+  createRole: false
+  roleName: procon-application-ops1
+
+resources:
+  requests:
+    cpu: "100m"

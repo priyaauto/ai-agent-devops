@@ -1,0 +1,35 @@
+global:
+  nfsServer: si00fa52.de.bosch.com
+fullnameOverride: "mariadb-nfs-slow"
+tag: '11.2.2'
+nfsEnabled: true
+nfsPath: /vol/si00fa52_vol09/procon_test_clusters/dev_cluster/openshift/ops1/data/infra-services/sysbench-mariadb
+secret:
+  SPRING_DATASOURCE_USERNAME: root
+  SPRING_DATASOURCE_PASSWORD: 6VdeCVE5
+  ROOT_PASSWORD: 6VdeCVE5
+service:
+  type: ClusterIP
+  port: 3306
+  nodePort: Null
+resources:
+  limits:
+    cpu: '2'
+    memory: 8G
+  requests:
+    cpu: 600m
+    memory: 3G
+args:
+  - '--lower_case_table_names=1'
+  - '--character_set_server=utf8mb4'
+  - '--explicit_defaults_for_timestamp'
+  - '--max_allowed_packet=8000000'
+  - '--innodb_read_io_threads=4'
+  - '--innodb_flush_log_at_trx_commit=2'
+  - '--innodb_flush_method=O_DIRECT'
+  - '--query-cache-size=0'
+  - '--transaction-isolation=READ-COMMITTED'
+  - '--max_allowed_packet=67108864'
+  - '--innodb_buffer_pool_size=16GB'
+  - '--max_connections=2000'
+  - '--ignore-db-dir=.snapshot'

@@ -1,0 +1,13 @@
+resources:
+  - ../../../defaults/infrastructure/strimzi-kafka-cr
+  - bridge.yaml
+#  - solace-connect-source-build.yaml
+#  - solace-connector-source.yaml
+#  - solace-connect-sink-build.yaml
+#  - solace-connector-sink.yaml
+
+patches:
+  - path: kafka-node-pool.yaml
+    target:
+      kind: KafkaNodePool
+      name: controller

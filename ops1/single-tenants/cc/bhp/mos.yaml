@@ -1,0 +1,53 @@
+fullnameOverride: cc-bhp-mos
+database:
+  nfsPath: /vol/si00fa52_vol09/procon_test_clusters/dev_cluster/openshift/ops1/data/tenant-specific/cc/bhp/cc-bhp-mos-mysql
+sealedSecret:
+  ROOT_PASSWORD: AgCBe8TY9O5RcRhPm948fH6p0QQ7b0GZPEFkYqiGQHMy/uRlIzAc6pKfWh/+IlLi39/zxcBdgzxEOBAG50NTVWkti4MEVnGAagElwRdAr9lQAVdyIEBCnCRwxbKQV2d1n93I/lSxwKx0mEa0IMQUOc28lAe2afpoHQWhk+n6PpCVB6B0b685tcY0dfdlsr2vQVRrnzDPYNXb6dLMJW5zdVaowK5r941otztntxVE8k58H9XdbzHtBpZz08uvYMaMOTjBz6R7Q5+7dVH6MhZXHg1qJT+yppdVA4q3TWryct3xfyGNYPeTEQqymLEn+GzthUl53m5HnYTaa8GcrxYHPS1wAqn+77h8/vCwN5OCaU/17mhhGzrPTZ9SnhjmGCxYM+ZXidcVXuJx18L2URd2W0AIHb+E0T7+owCPJMJEwUaS0TJPc6hciUVqPUH9t0k03FyIymI3ZYPjVIpdoMb1ak/qIJxEp7OJXCkoIwYO2C5HFdUespa+yZtegJZ1lYgNzmE/WQbRlRnUq5JF+UZWQjvGrpPZIgoTxVWGrks8aJoBT3v+hdNHH/Q6MLVI0IyoVcM8Dq/31uQtHOmK/7s8DQAHoNoEbZgKwWbiyzLqKRuHJ0U8gXJpwJPt+m8g2bS/YoYvUCR4YoQQEhAUNNsHj/c8LJEXD/GDJ0x1AkW31H819if3CE8JbhHL+Q93+BpNkP0=
+  SECURITY_OAUTH2_CLIENT_CLIENT_ID: AgBHN538CJNt6GQdYw2KVLw4RfPhBJJkkm5rg9m4HebvmnKWt15xtwj3JsBFplbylBP1wVseveNriO1tg52xzIlsaCvjmJzHfkK19Ok+LNmPv4+VOt9I4xoX8rP8xIBeAnG3+C471vVCLVtj7pfvfTcJ43JpR/gkPTVtviRkMX0D27ag+tDRM2nZGFvhoGrkCMaau4CafxLqT0gOm6zLbVYUCrL+MnWnYjt8ZtW300UABAKxGkwiyHpr/tsgcSEbqTFbVZKIMmOdxvKywzgoML7SrZO8jsGRXheTvwwTgSPy1to8bZRzHOKICwSEqzHbjQaMmzOCo2LZFi1uF5gRV4qWvtV7snqEQx/yFRliZBOEs0aRASiCQbi2TaXDCjVvk4NvLUF1D1/1UPflebd/6T6FE+wMOPBEnomC1M26UUfl/0rZZp9a+lllVENNL3lgUtytmCBZ1YMbpSL06LOOOQYdB0REKtzY4I5/4+k5sf2JJz0aQODxdIDdk3S/CiXRdvUMqcL2dp/eOLi7MgwiRzsrlnuUYJmi0wU33yMJyrZsGf5I+y3eZC/mHkiPMW0xjV8DbBmT+umlvOtHn/F/dtFeh4xlrIClTb0+X/rrxVKpy0ya/5vHPO6ApXemeQPc0J5RY8vNbwRw2kkPNQZytIUGBiu5NMTLFk+eI30IPNndEyqXx56RFmGUWYiWvpAonc1j9f4X7W2r
+  SECURITY_OAUTH2_CLIENT_CLIENT_SECRET: AgBUBlU4djgWSsXP9N0KQwiKzE0xjJr5/9Uq4ACOEt0lpMpOVf4xeV5TFagBZriQGN3yhd6ttAcqi7B4hiize0VNB6naE7ltTOfEh7rjGBsAX9KCL0PJYnu3fyqyJLAhO9P6fnNot6TZpu1YOird5HJMAbkBKfF3eueEAxT9k8Tc46bWlMdOZLJxmBq78YiYuKQmKhzwHBlUv1GESGeOjv4zvmxOZoevW4MQJf/MCkeNyQNOdYTZHb1o/44X56E3ZUfZdJoMwbbIPrfu+y70tvN3zz4NS/idw7ejh15eB91nIyAhscE4n2adtk3/Oh6T9G1vqx9FW6hNYC+IC/+SRz2zSJSV/iR9BSSIeZuuKlQuVGTSKNIhtLEzVtL7R2c2blWhX7Hper+TVq8RNQK+Zp49bKmRP2hzOpcgxX+IuObUWfoA4vDnuM2jOStuqAvBKMVEPHKUiYEaRd8MxraCJ2dA76msLeHIFDQ/VMNIK8K4fp0AGAoUScru0PoFiDt2jWekHp23/Mn1QcLf0TpmdwRxCex1Wbmv9G24LO+YyVn/aSwr2wP1qY3HHyf7TPNsrG5xkuZl2Ib7plpRFE8h5qdWEON6wE9xubfIC/YUi6dpm69Sk05wx/gbDBJpPTvpHpLt9lASbhVAlykftuPJVvm7fVneZK0LIibjgnzRRAkxtT+lVHaR1OHRVQhAbE1YZ4NedgqBrC0h
+  SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_ID: AgCszqR97xUOZWINqwTbcMaFodAsRnb3hWxkJeVBekwD7LvRVLKCkZdBzXCUSPvQsbjOWSfkSSdiYVupDTKX8qiXlb33TRznlzTFQFjCdPq6aM377Yjo4xS8cM8c9isZoSd2NsN9mMBC7qxn+VexOKF1D2DJnXpky3+ApUlt19P02y6AfInj8DMadcvf2Vb/ByT2wt5w0SbfYIs2W0DHSHPz9F2e+ubq2JI4AMoxOKCZwbORfhfFngWMjsEq2wTyMfALf0+ZwG/x9K09NbBgas078NXGXOi0C7eSct7gxVzhkUcJpiFk2xlxwZ7j/l3EcUCtmt8lNmW/+t22kdzSR0Z0fKXQn6ZtyFjGfqRG/AxXQmvSqDLLTWp/aOx1Jf5ecfv6/t8eWAycDx9tYiOyV3E15IEaNHfybgaETM84OPagBWx4mB7CFRACAkA5MrI5B1cJLfPpzvOKRFTOlSfXQrx9TQwpTBVjRfPVajhoqapWEeW0gDknQOQ0ohbkBO4rpaxxxKTcEhcAOBKEFeKOJf6Ksl09PPXWC59EnvIawI0KqCahPnjWG78GbkFqIeiGWXi5jUsG4BYxFQeRbqU0J1zxkiaIEeYEuX4Jqd9ABIEWH+xagMKchP61a3rpvSTfbvqkW8DSkhtVCtlNNMtqH4qcxWHc4NRDyzzGF3w4cBKDHIvz662M9puUxc4LNoO/g85XWNAS3N8edA==
+  SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_SECRET: AgA3P76ZTab9DuYOWvQjAY7CwZxWS+U5Dyy4nL8IRvB3bzYlspUF24v7rdobpMk2OcGrVhDN+yML+1j5607cNFP8PP8A5t95m47deNXXfabnj3TKKeMm04pD4Eao5IDWj0VDWFboSfBqakH/6NkJ63ZZPVduZ9sC0PVuNpUq6nFyfu1/pFYQi1R5JTU0WEZMawdm+N3c9pCu28j7ZZYVu1uviL9934gwq4dewQQ03vs7nund6Eoqyu2Fv1gNoFAB+LvWf/l3fK3KHmMCz751khKK9Ejt2lFDUXY8pDsIfHY17f5rvtqE2Mmxj3d1wtwizra7CEUzZJJVkvXPU2aP/ERoE5Q+bDOI8+7cd+moWlpCflUHt3mDVgCyCVNrUmyrdZ5KNnoPKQ8SIHYjpqA801iZZmEd0iyeQU0s/amqZGy+pl9TC6mMqvfoQKZesfk+xk4E8QB9uAR/rU00dLtTY7I1HqZq9X5QOKiTTFXvWZgBqEJVT0Im7OMMI0hAAmDhnIPO+nEmX2k3pLeYtIJMkNC7DU3/Uj4PVgmpJ+XCG2vfnHNtZw4FlBKNpgqEJMgjirAtIcPDESOUwijrPFFM8qi4x12eFqd3T2yhyvYghB77oAixqdMvnUMAphASX7SVal6v+Z119eSBy1llJ5+VeF486kNZszYeJmP3WcVnGgx3Nfcq8Nqgvdnzq7XJeHA7YqwBFl6GQX7e9Q==
+  SPRING_DATASOURCE_PASSWORD: AgCxOjHOdrKE5uZKVaZI5zMnOXY3ZlU2vhhIxVXEI0bE5ZYPwnPsiRPfn1pyD4sIG4msk/deeKsiKngvWFkYJ3AjkJEr7ltxTAAMaTUvpKZVqjFK+LqEZz283eg9Ql82LznfUlW1xenQJ4Oqc+tVSU96log8tWHQTODcK4pzGuE+pBiD9OhVntiUa7NIfEEJq06B+rQT9wgSXSGfv1yvEx8SKadmCYBENPUXlBEfo3V8vQvzskWATFuTr35TPd1iTmTdBBs7DJTCsT2024b1fJJ6a1R0cuOx6rlx8hjYeCWTQwD+RYlDXKE97IIqJm/d0gQAmiaOc37mHpLnLsxP9PD27s5NAeUHAnDeGZugDSz4AgeSd3aBiHN9fgyEX/f242kc+9gR92MjP6a/BIJZBMsMZCNQ1Jf+8/4dBX5RIipypHILOsR+cE0tDIaQh0jl4Ph9/Gs/pvI3ovRicjnCGNNV8hs0TNuOdFD/TFMnfE4LSMIGY9reeUbBIZC0dkxOWuGEDalT+wTkqUfnPMA5AMUWYZgxtk/rMrBX+TrtQmTPsIgBh+G4JY3KRAHn262lidNPtGcGeqY7CyMdIpo1rJpHaOw1QBaq9+KePfl4C9ARuPydU/WWyPYZJEKvg6nQk/fwmvyKhjPez9VQ55V9gxalDjJ/ovJI/9/HYy2rdWsIx80nAb7jBo9SA0MlxkMvTrbgyKk=
+  SPRING_DATASOURCE_USERNAME: AgBAHKlRr3kUgf+rIjp94M8EfwdN7/fAxyx1kHrQxf3IYPgj2VNeSnpSwXRiymYIGHIHRb+dGE4+6lKiZYw0m3LX6wbWpyzJaJrzUZJaOd2VPLnhrIhnNlfp72pV7VujG7hGuetRndGiv557v50qfjB8brjen32vef4742xPPAclSqCKP4Ljqx7eFLaJXPKOftB01zKeb9a9IXBegu9pw/ct+O6f6NVtt7dPBHwgb3E4UkVsQDn03ystmkiDMG0HF47DtZZ8ASR6MoGeMQgnVB0EDGdcMqF0/lAdTPrY6Cfy0P1aAcJAZEGd1dIPT6vm76KdX1KeXTMlKcJ0Za8qIKZl7MQyB2ii/FGY00yRvjiU6Ezm/i0VnlVxuKqtPjoXHJNFMBexlcI8rdBLwlO+kzwCFBNXTbUaYSaSt09Y++NZr5ngCL+aJc1ZTCvvib/q2Ik+dIujVgP+30qsVEnYQioKR2g1KM7dCXJ8n2kQ7HgG49TlYy/PYaWahvtuNYy0GkECdGS60KRd+T45ziI6LBXTFmcpokWKAuO2tc7fAqtlXgqEDTKu9807RZZgrvSAQLPVOJQVzuZUmYYKbBEGpYQDKkLQo1eyBAAAapuCBtyjEPwNpi5R1sdme+Y9rKtOELlh+0IEfp+OPabq9w31oiAcZt14DQNgxuF7BzQqwKxJXbJo6oyi9yncgxJnTfcAuV3eOIA=
+configMap:
+  APPLICATION_CONFIGFORSAPREQUEST_PLANTID: "0500"
+  APPLICATION_CONFIGFORSAPREQUEST_WAREHOUSEID: "051"
+  APPLICATION_CONFIGFORSAPREQUEST_STORAGELOCATIONID: "0510"
+  APPLICATION_DEMANDCALCULATION_TIMEHORIZON_FORCOMPONENT: 120
+  APPLICATION_NEWRELICCONFIG_LICENSEKEY: 'a2ee359d848fa6753f9a4d5cb6143bfc555fNRAL'
+  APPLICATION_NEWRELICCONFIG_PROXYHOST: rb-proxy-emea.internal.bosch.cloud
+  APPLICATION_NEWRELICCONFIG_PROXYPORT: '8080'
+  NEW_RELIC_AGENT_ENABLED: "false"
+  NEW_RELIC_APP_NAME: ops1-cc-bhp-mos
+  APPLICATION_DATABASE_URL: $(TENANT)-$(PLANT)-mos-database:3306
+  SPRING_JPA_SHOW-SQL: 'true'
+initContainer:
+  enabled: true
+  image:
+    repository: bcr2.inside.bosch.cloud/procon/mos-liquibase-task
+  secretKeyRef: ["SPRING_DATASOURCE_USERNAME", "SPRING_DATASOURCE_PASSWORD"]
+cronjobs:
+  - name: mos-cumulative-split-task
+    spec:
+      schedule: "*/5 * * * *" # Every 5 min
+      timeZone: &timezone "Europe/Berlin"
+      image:
+        repository: bcr2.inside.bosch.cloud/procon/mos-cumulative-split-task
+  - name: mos-clean-up-task
+    spec:
+      schedule: "2 0 * * *" # Every day at 00:02
+      timeZone: *timezone
+      image:
+        repository: bcr2.inside.bosch.cloud/procon/mos-domain-clean-up-task
+  - name: mos-domain-update-task
+    spec:
+      schedule: "7 0 * * 2-5" # Every day at 00:07 from tuesday to friday
+      timeZone: *timezone
+      image:
+        repository: bcr2.inside.bosch.cloud/procon/mos-domain-update-task
+  - name: mos-bom-explosion-deletion-task
+    spec:
+      schedule: "4 0 */7 * *" # Every 7 days at 00:04
+      timeZone: *timezone
+      image:
+        repository: bcr2.inside.bosch.cloud/procon/mos-bom-explosion-deletion-task

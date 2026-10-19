@@ -1,0 +1,11 @@
+image:
+  repository: bcr2.inside.bosch.cloud/procon/ioflow-frontend
+  pullPolicy: Always
+  tag: 14.1.0
+gateway: http://procon-spring-cloud-gateway.procon-ops1-multitenant.svc.cluster.local:8080
+ingress:
+  hosts:
+    - host: ops1.ppc-cl1-dev.bosch.com
+      paths:
+        - path: /ioflow
+          pathType: Prefix
